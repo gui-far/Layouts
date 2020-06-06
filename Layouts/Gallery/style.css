@@ -1,0 +1,75 @@
+body, ul, li, p {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    text-align: center;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 100px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.header {
+    background-color: #1d1e20;
+    display: flex; /*This will make all elements lined up (HEADER ELEMENTS)*/
+    justify-content: space-between; /*Will justify content with the first and last element at the start and end of screen respectively*/
+    padding: 20px;
+    align-items: center; /*If the elements have different height, this will align they in the middle*/
+    flex-wrap: wrap; /*If the screen get smaller, the elements be below each other */
+}
+
+.menu {
+    display: flex; /*This will make all elements lined up (UL MENU) */
+
+}
+
+.menu li {
+    margin-left: 20px; /*Space between elements*/
+}
+
+.menu li a {
+    display: block;
+    padding: 10px; /*space between parent element and child elements*/
+    background: tomato;
+    
+}
+
+.gallery {
+    display: flex; /*This will make all elements lined up (IMAGES) */
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery > div {
+    /*flex-grow flex-shrink flex-basis will make more sens using flex-wrap */
+    /*So if the element size get smaller than 200px, some elements will go to another line*/
+
+    /*minimun 300px for width*/
+    flex-basis: 300px; 
+    
+    /*elements min size will be 300px*/
+    flex-grow: 1;
+    
+    /*elements max size will be 300px*/
+    /*flex-shrink: 1;*/
+
+    margin: 10px;
+}
